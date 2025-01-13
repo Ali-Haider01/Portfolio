@@ -497,10 +497,14 @@ section .button button:hover {
 
 /* Footer CSS */
 footer {
-  background: var(--primary-color);
+  background: var(--black-color);
   padding: 15px 0;
   text-align: center;
   font-family: 'Poppins', sans-serif;
+}
+
+.footer-icons {
+  display: none;
 }
 
 footer .text span {
@@ -526,7 +530,7 @@ footer .text span a:hover {
   color: var(--white-color);
   background: var(--primary-color);
   padding: 10px 12px;
-  font-size: 18px;
+  font-size: 5px;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.15);
   display: none;
@@ -603,8 +607,47 @@ footer .text span a:hover {
     color: var(--primary-color);
   }
 
-  nav .navbar .media-icons {
+  /*.media-icons {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    align-items: center;
+    transition: all 0.5s ease;
+  } */
+
+  footer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer-icons {
+    display: block;
+    margin-left: 5%;
+  }
+
+  footer .text {
+    margin-left: 3%;
+    text-align: center;
+    padding-right: 2%;
+  }
+
+  footer .text span {
+    font-size: 11px;
+    font-weight: 200;
+    color: var(--white-color);
+  }
+
+  .footer-icons .link,
+  .footer-icons .insta,
+  .footer-icons .you {
+    color: var(--white-color);
+    /* Default white color */
+  }
+
+
+  nav .media-icons {
     display: none;
+
   }
 
   nav .menu-btn,
@@ -647,13 +690,16 @@ footer .text span a:hover {
   }
 }
 
-@media (max-width:600px) {
+@media (max-width:700px) {
   .home {
     background: url("012.jpeg") no-repeat;
     background-attachment: fixed;
     background-size: 200% auto;
 
   }
+}
+
+@media (max-width:600px) {
 
   .home .text-two {
     font-size: 55px;
