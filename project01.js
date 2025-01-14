@@ -50,6 +50,21 @@ for (var i = 0; i < navLinks.length; i++) {
 
 // Sending Email To Ali Haider
 
+// function sendEmail() {
+//   const name = document.getElementById('name').value;
+//   const email = document.getElementById('email').value;
+//   const message = document.getElementById('message').value;
+
+//   if (name && email && message) {
+//     const subject = encodeURIComponent(`Contact from ${name}`);
+//     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+//     const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=msalihaider21@gmail.com&su=${subject}&body=${body}`;
+//     window.open(gmailLink, '_blank'); // Opens Gmail in a new tab
+//   } else {
+//     alert('Please fill in all fields before sending.');
+//   }
+// }
+
 function sendEmail() {
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
@@ -58,10 +73,11 @@ function sendEmail() {
   if (name && email && message) {
     const subject = encodeURIComponent(`Contact from ${name}`);
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
-    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=msalihaider21@gmail.com&su=${subject}&body=${body}`;
-    window.open(gmailLink, '_blank'); // Opens Gmail in a new tab
+    const mailtoLink = `mailto:msalihaider21@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink; // Redirects to mail client
   } else {
     alert('Please fill in all fields before sending.');
   }
 }
+
 
